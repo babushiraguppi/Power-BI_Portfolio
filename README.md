@@ -1,2 +1,12 @@
 # Power-BI_Portfolio
 Sample Dashboard to showcase the capabilities and expertise with Power BI
+
+Given is the dataset of all IT tickets raised since 2012 December. The tickets can be categorized as P1- Critical, P2- Very High, P3- High and P4- Standard. P1 is given the highest priority whereas P4 is the lowest priority. A ticket could be high priority (P1 and P2) and still not be a major incident. Major incident means the incident could cause serious disruption to the service
+The excel workbook contains two sheets (P1&P2 tickets) and (P3&P4 tickets). Please find description of the data in each excel sheet below-
+P1&P2 tickets: The sheet contains data for all priority tickets. The column ‘Major incident’ indicates whether it is a major incident or not. The ‘Opened’ column indicates the date the ticket was created, the ‘Resolved’ column indicates when the ticket was marked as resolved by IT and the ‘Closed’ column indicates when the ticket was closed either by System based on when it was marked as resolved or closed by the user raising it. ‘Reassignment counter’ indicates how many times the ticket was reassigned to different people in IT before it was resolved and ‘Ticket state’ indicates the latest state of the ticket. ‘Region’ indicates the location of the user who raised the ticket
+P3&P4 tickets: The sheet contains data for all tickets that are P3&P4 category. It also has tickets that could have reached P1 or P2 status in the lifecycle but were either downgraded to P3&P4 again or continue to stay at P1 or P2. Filter on INCxxx0104 or on INCxxx5443 to understand each situation, respectively. The column ‘Ticket Version’ indicates different versions of a single ticket. Value 0 indicates beginning of the lifecycle and it could go to any number depending on how many times the ticket was updated. With each update, the priority and state could change or remain the same. To see the lifecycle of the ticket, simply sort on ticket version- low to high. ‘Created’ and ‘Update’ are date fields indicating when the ticket was initially created and then contains the date for every time it was updated. ‘Priority New’ indicates the latest priority and ‘Priority Old’ indicates the n-1 priority. When Ticket version is 0, ‘Priority New’ will contain the priority assigned at the beginning of the ticket and ‘Priority Old’ will remain blank. Same applies to ‘Ticket State New’ and ‘Ticket State Old’. There is no expectation to join the two datasets.
+
+
+
+![image](https://github.com/user-attachments/assets/09aaaae4-e001-4b05-b221-bff155618ae5)
+
